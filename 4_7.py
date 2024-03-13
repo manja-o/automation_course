@@ -7,20 +7,22 @@ while counter < 2:
     operation = input('Please, choose operation that need to be done from the list: +, -, *, /: ')
     if operation == '+':
         print(f'{first_number} + {second_number} = {first_number + second_number}')
+        break
     elif operation == '-':
         print(f'{first_number} - {second_number} = {first_number - second_number}')
+        break
     elif operation == '*':
         print(f'{first_number} * {second_number} = {first_number * second_number}')
+        break
     elif operation == '/':
         if second_number == 0:
             print('Division by zero is forbidden')
             counter += 1
         else:
             print(f'{first_number} / {second_number} = {(first_number / second_number):.2f}')
+            break
     else:
         print('Incorrect operation')
         counter += 1
-    if counter == 0:
-        break
     if counter == 2:
         print('You have used all attempts')
