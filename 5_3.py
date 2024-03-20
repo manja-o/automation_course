@@ -1,8 +1,6 @@
 # task_3 - Calculator 3.0
 
-counter = 1
-while counter == 1:
-
+while True:
     try:
         first_number = float(input('Please, enter first number: '))
         second_number = float(input('Please, enter second number: '))
@@ -28,7 +26,7 @@ while counter == 1:
                     result = first_number / second_number
                     print(f'{first_number} / {second_number} = {result:.2f}')
             elif operation == 'exit':
-                counter = 0
+                break
             else:
                 print('Incorrect operation')
         except ValueError:

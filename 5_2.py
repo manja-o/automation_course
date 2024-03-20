@@ -1,9 +1,13 @@
 # task_2 - Square root of number (except)
 
+class NegativeNumbersException(Exception):
+    pass
+
+
 try:
     number = float(input('Please, enter your number: '))
     if number < 0:
-        raise Exception("Sorry, no numbers below zero allowed")
+        raise NegativeNumbersException("Sorry, no numbers below zero allowed")
 except ValueError:
     print("Please, enter only numbers here")
 else:
